@@ -2,17 +2,17 @@
  <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="javascript:void(0)">My Website Name</a>
+                <router-link class="navbar-brand" :to="{name:'MainPage'}">Open</router-link>
                 <a class="navbar-brand menu-button" href="javascript:void(0)">
-                    <img class="menu-button-img" src="https://devpitchie.sixlogics.com/static/images/menu-button-black.svg">
+                    <img class="menu-button-img" src="../assets/menu-button-black.svg">
                 </a>
             </div>
             <!-- <ul class="nav navbar-nav mobile-screen">
                 <li class="active"><a href="javascript:void(0)">Home</a></li>
             </ul> -->
             <ul class="nav navbar-nav navbar-right mobile-screen">
-                <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><router-link :to="{name:'Signup'}"><span class="glyphicon glyphicon-user"></span> Sign Up</router-link></li>
+                <li><router-link :to="{name:'Login'}"><span class="glyphicon glyphicon-log-in"></span> Login</router-link></li>
             </ul>
         </div>
     </nav>

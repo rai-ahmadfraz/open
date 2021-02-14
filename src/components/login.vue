@@ -1,7 +1,7 @@
 <template>
   <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3 login">
+            <div class="col-md-6 col-md-offset-3 jumbotron">
                 <div class="form-group">
                     <label for="email" class="email">Email:</label>
                     <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -27,19 +27,6 @@ export default {
 </script>
 
 <style scoped>
-  .login {
-            border: 1px solid rgba(0, 0, 0, .125);
-            border-radius: 1.25rem;
-            height: 400px;
-            position: relative;
-            top: 100px;
-        }
-
-        .email {
-            position: relative;
-            margin-top: 80px;
-        }
-
         .form-control {
             height: 42px;
         }
