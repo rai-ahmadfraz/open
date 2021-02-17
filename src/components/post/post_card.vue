@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 col-md-offset-2">
         <div class="post_view_section">
           <div class="normal_post_wrap">
             <div class="view_post_user_pic">
@@ -37,7 +37,7 @@
               <div class="post_view_details">
                 <div class="post_area">
                   <div class="">
-                    <p dir="auto">Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <p dir="auto">Rai agfdg  dg d gd fg dfg dfg dfg dfg re ter tertertert  fgd g dfg dfg df gd tre ter tr</p>
                   </div>
                 </div>
               </div>
@@ -54,11 +54,11 @@
                   <div class="commenter_text_add_inner">
                     <div class="commenter_text_add">
                       <textarea rows="1"></textarea>
-                      <button class="btn btn-primary">Send</button>
                     </div>
-                    <div>
-                      <i class="far fa-paper-plane"></i>
-                      <i class="fa fa-thumbs-up"></i>
+                    <div class="action_icons">
+                     <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                      <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                      <!-- <i class="fa fa-comment" aria-hidden="true"></i> -->
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -189,6 +189,7 @@ export default {
 .post_view_section .post_view_area .comments_view_details_section .comments_view_outer .commenter_text_add_inner {
     width: 100%;
     padding-bottom: 20px;
+    display: inline-flex;
 }
 .post_view_section .post_view_area .comments_view_details_section .comments_view_outer .commenter_text_add_inner .commenter_text_add {
     width: calc(100% - 90px);
@@ -207,5 +208,10 @@ export default {
     padding-right: 50px;
     font-size: 14px;
 }
-
+.action_icons{
+  margin-left: 2px;
+}
+.action_icons i{
+  font-size: 24px;
+}
 </style>
