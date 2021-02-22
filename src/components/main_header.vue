@@ -2,7 +2,7 @@
  <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <router-link class="navbar-brand" :to="{name:'MainPage'}">Open</router-link>
+                <router-link class="navbar-brand" :to="{name:'MainPage'}">Tree Stack</router-link>
                 <a class="navbar-brand menu-button" href="javascript:void(0)">
                     <img class="menu-button-img" src="../assets/menu-button-black.svg">
                 </a>
