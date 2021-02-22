@@ -57,16 +57,20 @@ export default {
       signUp(){
                 this.$validator.validateAll().then(result =>{
 
+                    var formdata = new FormData();
+                    formdata.append('data',this.signup);
+
                    if(result){
-                      
                       axios({
                         method: 'post',
                         url: this.APP_BASE_URL+'/register',
-                        data:this.signup,
+                        data:formdata,
                         headers: { 
+                            'Accept': 'application/json',
+                             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
                         },
                         })
-                        .then(function (response) {
+                        .then(response => {
                             console.log(response);
                         });
 
