@@ -14,7 +14,7 @@ export default {
   components:{MainHeader,HomeHeader},
   data(){
     return{
-      islogin:true
+      islogin:this.$store.state.loginUser ? true:false
     }
   }
 }

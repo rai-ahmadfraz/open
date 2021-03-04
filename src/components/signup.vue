@@ -58,7 +58,10 @@ export default {
                 this.$validator.validateAll().then(result =>{
 
                     var formdata = new FormData();
-                    formdata.append('data',this.signup);
+                    formdata.append('first_name',this.signup.first_name);
+                    formdata.append('last_name',this.signup.last_name);
+                    formdata.append('email',this.signup.email);
+                    formdata.append('password',this.signup.password);
 
                    if(result){
                       axios({
@@ -71,14 +74,15 @@ export default {
                         },
                         })
                         .then(response => {
-                            console.log(response);
+                            this.$toasted.show(response.data.message);
+                            this.$router.push({name:'Login'});
                         });
 
                     }
 
                 }).catch(error=>{
                     console.log(error);
-                })
+                });
       }
   }
 }
