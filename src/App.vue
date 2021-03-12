@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HomeHeader v-if="islogin"></HomeHeader>
+    <HomeHeader v-if="$store.state.loginUser.token"></HomeHeader>
     <MainHeader v-else></MainHeader>
     <router-view/>
   </div>
@@ -14,7 +14,7 @@ export default {
   components:{MainHeader,HomeHeader},
   data(){
     return{
-      islogin:this.$store.state.loginUser ? true:false
+      islogin: this.$store.state.loginUser.token ? true:false
     }
   }
 }

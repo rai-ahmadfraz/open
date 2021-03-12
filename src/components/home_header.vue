@@ -14,11 +14,11 @@
                 <li><router-link :to="{name:'Home'}">Home</router-link></li>
                 <li><router-link :to="{name:'Home'}">My posts</router-link></li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">User
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">{{$store.state.loginUser.first_name}}
                         <!-- <img src="http://localhost/pitch_images/avatars/30/Nhx01DM9QbFUuar4YodAKfFX3mnhbTOKPELv3adG.jpeg" alt="Avatar"> -->
                     <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                    <li><a href="javascript:void(0)">Logout</a></li>
+                    <li @click="logout()"><a href="javascript:void(0)">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -28,7 +28,19 @@
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  data(){
+      return{
+
+      }
+  },
+  methods:{
+      logout(){
+          this.$store.state.loginUser = [];
+          this.$store.commit('removeLoginUser','');
+          this.$router.push({name:'Login'});
+      }
+  }
 }
 </script>
 <style scoped>

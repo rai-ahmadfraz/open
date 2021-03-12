@@ -4,12 +4,12 @@
             <div class="col-md-6 col-md-offset-3 jumbotron">
                 <div class="form-group">
                     <label for="email" class="email">Email:</label>
-                    <input type="text" class="form-control" id="email" v-model="login.email" v-validate="'required'" placeholder="Enter email" name="email">
+                    <input type="text" class="form-control" id="email" tabindex="1" v-model="login.email" v-validate="'required'" placeholder="Enter email" name="email">
                     <em class="text-danger">{{errors.first('email')}}</em>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" class="form-control"  v-model="login.password" v-validate="'required'" id="password" placeholder="Enter password" name="password">
+                    <input type="password" class="form-control" tabindex="2" @keyup.enter="Login()"  v-model="login.password" v-validate="'required'" id="password" placeholder="Enter password" name="password">
                      <em class="text-danger">{{errors.first('password')}}</em>
                 </div>
                 <div class="login_button">
@@ -54,7 +54,9 @@ export default {
                         .then(response => {
                             this.$toasted.show(response.data.message);
                             this.$store.commit('addLoginUser',response.data.loginUser);
-                        });
+                            this.$router.push({name:'Home'});
+                            
+                            });
 
                     }
 

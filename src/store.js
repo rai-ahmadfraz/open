@@ -12,6 +12,9 @@ const store = new Vuex.Store({
     mutations:{
       addLoginUser(state,user){
         state.loginUser = user;
+      },
+      removeLoginUser(state,user){
+        state.loginUser = [];
       }
     }
   });
